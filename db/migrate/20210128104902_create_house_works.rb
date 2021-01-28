@@ -4,6 +4,7 @@ class CreateHouseWorks < ActiveRecord::Migration[6.0]
       t.integer :clean_id, null: false
       t.integer :towel_id, null: false
       t.integer :garbage_id, null: false
+      t.integer :date_id, null: false
       t.references :user, foreign_key: true
 
       t.timestamps
