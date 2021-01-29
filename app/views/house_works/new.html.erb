@@ -1,1 +1,51 @@
-<p>家事を入力</p>
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">家事の内容を入力</h2>
+    <%= form_with model: @house_works,local: true do |f| %>
+
+    <%# 掃除 %>
+    <div class="items-detail">
+      <div class="weight-bold-text">掃除</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          掃除した場所
+        </div>
+        <%= f.collection_select(:clean_id, Clean.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+      </div>
+    </div>
+
+    <%# タオル %>
+    <div class="items-detail">
+      <div class="weight-bold-text">タオル交換</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          交換した場所
+        </div>
+        <%= f.collection_select(:towel_id, Towel.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+      </div>
+    </div>
+
+    <%# ゴミ出し %>
+    <div class="items-detail">
+      <div class="weight-bold-text">ゴミ出し</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          ゴミの種類
+        </div>
+        <%= f.collection_select(:garbage_id, Garbage.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+      </div>
+    </div>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "更新" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+
+  </div>
+  <% end %>
+
+</div>

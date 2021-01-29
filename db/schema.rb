@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 2021_01_28_104902) do
 
   create_table "house_works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "clean_id", null: false
-    t.integer "towel_id", null: false
-    t.integer "garbage_id", null: false
-    t.integer "date_id", null: false
+    t.integer "clean_id"
+    t.integer "towel_id"
+    t.integer "garbage_id"
+    t.date "date", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
