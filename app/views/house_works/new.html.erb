@@ -6,6 +6,26 @@
     <h2 class="items-sell-title">家事の内容を入力</h2>
     <%= form_with model: @house_works,local: true do |f| %>
 
+    <%# 日付 %>
+    <div class="form-group">
+    <div class='form-text-wrap'>
+      <div class="weight-bold-text">日付</div>
+    </div>
+    <div class='input-birth-wrap'>
+      <%= raw sprintf(
+                  f.date_select(
+                    :date,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: (Time.now.year),
+                    end_year: (Time.now.year + 2),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+    </div>
+  </div>
+
     <%# 掃除 %>
     <div class="items-detail">
       <div class="weight-bold-text">掃除</div>
