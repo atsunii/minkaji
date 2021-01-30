@@ -13,6 +13,7 @@ class HouseWork < ApplicationRecord
       validates :clean_id
       validates :towel_id
       validates :garbage_id
+      validates :score_id
     end
   end
 end

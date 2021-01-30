@@ -11,12 +11,13 @@
 - has_many : house_works
 
 ## house_worksテーブル
-|Column    |Type      |Options |
-|------    |----      |------  |
-|clean_id  |integer   |        |
-|towel_id  |integer   |        |
-|garbage_id|integer   |        |
-|date      |date      |null_false     |
+|Column    |Type      |Options          |
+|------    |----      |-------          |
+|clean_id  |integer   |                 |
+|towel_id  |integer   |                 |
+|garbage_id|integer   |                 |
+|score_id  |integer   |null_false       |
+|date      |date      |null_false       |
 |user_id   |references|foreign_key: true|
 
 ### Association

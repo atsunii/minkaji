@@ -21,7 +21,7 @@ class HouseWorksController < ApplicationController
   private
 
   def house_work_params
-    params.require(:house_work).permit(:date, :clean_id, :towel_id, :garbage_id).merge(user_id: current_user.id)
+    params.require(:house_work).permit(:date, :clean_id, :towel_id, :garbage_id, :score_id).merge(user_id: current_user.id)
   end
 
 end

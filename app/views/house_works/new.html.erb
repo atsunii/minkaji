@@ -28,10 +28,10 @@
 
     <%# 掃除 %>
     <div class="items-detail">
-      <div class="weight-bold-text">掃除</div>
+      <div class="weight-bold-text">掃除した場所</div>
       <div class="form">
         <div class="weight-bold-text">
-          掃除した場所
+          各種2ポイント
         </div>
         <%= f.collection_select(:clean_id, Clean.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
       </div>
@@ -39,10 +39,10 @@
 
     <%# タオル %>
     <div class="items-detail">
-      <div class="weight-bold-text">タオル交換</div>
+      <div class="weight-bold-text">タオル交換した場所</div>
       <div class="form">
         <div class="weight-bold-text">
-          交換した場所
+          各種1ポイント
         </div>
         <%= f.collection_select(:towel_id, Towel.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
       </div>
@@ -50,12 +50,23 @@
 
     <%# ゴミ出し %>
     <div class="items-detail">
-      <div class="weight-bold-text">ゴミ出し</div>
+      <div class="weight-bold-text">ゴミ出しした種類</div>
       <div class="form">
         <div class="weight-bold-text">
-          ゴミの種類
+          各種2ポイント
         </div>
         <%= f.collection_select(:garbage_id, Garbage.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+      </div>
+    </div>
+
+    <%# 得点 %>
+    <div class="items-detail">
+      <div class="weight-bold-text">獲得ポイントは？</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          家事ポイントの合計を入力しよう
+        </div>
+        <%= f.collection_select(:score_id, Score.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
       </div>
     </div>
 

@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_104902) do
     t.integer "clean_id"
     t.integer "towel_id"
     t.integer "garbage_id"
+    t.integer "score_id"
     t.date "date", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
