@@ -2,7 +2,7 @@ class HouseWorksController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
-    @house_works = HouseWork.order("created_at DESC")
+    @house_works = HouseWork.all.order("created_at DESC")
   end
 
   def new
