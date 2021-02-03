@@ -20,7 +20,7 @@
             <% if user_signed_in? %>
              <div class="nav__right">
                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-               <%#= link_to "進捗入力", new_housework_path, class: :nav__btn %>
+               <%= link_to "家事を入力", new_house_work_path, class: :nav__btn %>
              </div>
             <% else %>
              <div class="nav__right">
