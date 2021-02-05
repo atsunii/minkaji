@@ -6,6 +6,4 @@ class Garbage < ActiveHash::Base
     { id: 3, name: 'ペットボトル(2点)' },
     { id: 4, name: 'ビン(2点)' },
   ]
-  include ActiveHash::Associations
-  has_many :house_works
 end

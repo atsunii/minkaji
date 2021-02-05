@@ -7,7 +7,6 @@ class CreateHouseWorks < ActiveRecord::Migration[6.0]
       t.integer :score_id
       t.date :date, null: false
       t.references :user, foreign_key: true
-
       t.timestamps
     end
   end

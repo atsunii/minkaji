@@ -12,6 +12,4 @@ class Score < ActiveHash::Base
     { id: 9, name: '9ポイント' },
     { id: 10, name: '10ポイント' },
   ]
-  include ActiveHash::Associations
-  has_many :house_works
 end

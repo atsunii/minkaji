@@ -25,29 +25,29 @@
         <%= link_to house_works_path(house_work.id) do %>
         <div class='item-info'>
           <h3 class='item-name'>
-            <%#= @house_works.user.name %>
+            <%= @user.name %>
           </h3>
           <table class="detail-table">
       <tbody>
         <tr>
           <th class="detail-item">日付</th>
-          <td class="detail-value"><%= @house_works.date %></td>
+          <td class="detail-value"><%= :date %></td>
         </tr>
         <tr>
           <th class="detail-item">掃除した場所</th>
-          <td class="detail-value"><%= @house_works.clean.name %></td>
+          <td class="detail-value"><%= @house_work.clean.name %></td>
         </tr>
         <tr>
           <th class="detail-item">タオル交換</th>
-          <td class="detail-value"><%= @house_works.towel.name %></td>
+          <td class="detail-value"><%= @house_work.towel.name %></td>
         </tr>
         <tr>
           <th class="detail-item">ゴミ出し</th>
-          <td class="detail-value"><%= @house_works.garbage.name %></td>
+          <td class="detail-value"><%= @house_work.garbage.name %></td>
         </tr>
         <tr>
           <th class="detail-item">合計獲得ポイント</th>
-          <td class="detail-value"><%= @house_works.score.name %></td>
+          <td class="detail-value"><%= @house_work.score.name %></td>
         </tr>
       </tbody>
       </table>

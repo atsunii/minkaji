@@ -5,6 +5,8 @@ class HouseWork < ApplicationRecord
   belongs_to :Clean
   belongs_to :Towel
   belongs_to :Garbage
+  belongs_to :score
+  
 
 
   with_options presence: true do

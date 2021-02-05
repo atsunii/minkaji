@@ -4,6 +4,4 @@ class Towel < ActiveHash::Base
     { id: 1, name: 'キッチンタオル(1点)' },
     { id: 2, name: '洗面所タオル(1点)' },
   ]
-  include ActiveHash::Associations
-  has_many :house_works
 end

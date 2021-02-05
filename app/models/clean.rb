@@ -10,6 +10,4 @@ class Clean < ActiveHash::Base
     { id: 7, name: '洗面台(2点)' },
     { id: 8, name: '廊下(2点)' }
   ]
-  include ActiveHash::Associations
-  has_many :house_works
 end
