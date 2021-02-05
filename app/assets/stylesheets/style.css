@@ -38,7 +38,6 @@ a {
 
 .header {
   background-color: #f1f8fe;
-  margin-bottom: 48px;
   padding: 5px 0;
 
 }
@@ -52,7 +51,7 @@ a {
   justify-content: space-between;
 }
 .logo {
-  width: 150px;
+  width: 160px;
 }
 .nav__btn{
   display: inline-block;

@@ -1,9 +1,9 @@
 class HouseWorksController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!
   before_action :set_house_work, only: [:show]
 
   def index
-    @house_works = HouseWork.all.order("created_at DESC")
+    @house_works = HouseWork.all
   end
 
   def new
