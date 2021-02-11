@@ -1,6 +1,7 @@
 class HouseWorksController < ApplicationController
-  before_action :authenticate_user!
-  before_action :set_house_work, only: [:show]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_house_work, only: [:show, :edit, :update, :destroy]
+  before_action :redirect, only: [:edit, :update, :destroy]
 
   def index
     @house_works = HouseWork.all
@@ -22,6 +23,23 @@ class HouseWorksController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @house_work.update(house_work_params)
+      redirect_to house_work_path(@house_work.id)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @house_work.destroy
+    redirect_to root_path
+  end
+
+
   private
 
   def house_work_params
@@ -32,4 +50,8 @@ class HouseWorksController < ApplicationController
     @house_work = HouseWork.find(params[:id])
   end
   
+  def redirect
+    redirect_to :root unless @house_work.user == current_user
+  end
+
 end

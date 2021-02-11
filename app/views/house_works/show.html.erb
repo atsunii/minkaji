@@ -1,29 +1,16 @@
-<%= render "shared/header" %>
-<div class='main'>
-
-  <%# 画面上部の帯部分 %>
-  <div class='title-contents'>
-    <h2 class='service-title'>
-      MinKajiで家事を楽しく分担
-    </h2>
-    <p class='service-explain'>
-      家で過ごす時間が増えたこんな時代だから
-    </p>
-    <p class='service-explain'>
-      みんなで快適な'おうち時間'を。
-    </p>
-  </div>
-
-  <%# 商品一覧 %>
-  <div class='item-contents'>
-    <h2 class='title'>★完了した家事一覧★</h2>    
-    <%= link_to '新規で家事を入力', new_house_work_path, class: "subtitle" %>
-    <ul class='item-lists'>
-
-     <% if @house_works.present?%>
+<%# 商品の概要 %>
+<div class="item-show">
+  <div class="item-box">
+    <%# ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分ける %>
+    <% if user_signed_in? && current_user.id == @house_work.user_id %>
+      <%= link_to '家事内容の編集',  edit_house_work_path(@house_work.id), method: :get, class: "item-red-btn" %>
+      <p class='or-text'>or</p>
+      <%= link_to '削除', house_work_path(@house_work.id), method: :delete, class:'item-destroy' %>
+    <% end %>
+    <% if @house_works.present?%>
        <% @house_works .each do |house_work| %>
         <li form_with class='list'>
-        <%= link_to house_work_path(house_work.id) do %>
+        <%= link_to house_works_path(house_work.id) do %>
         <div class='item-info'>
           <h3 class='item-name'>
             <%= house_work.user.name %>
@@ -52,12 +39,12 @@
         </tr>
       </tbody>
       </table>
-          </div>
+      </div>
         </div>
        </li>
         <% end %>
         <% end %>
         <% end %>
-   </ul>
- </div>
+  </div>
 </div>
+
