@@ -61,9 +61,15 @@
 }
 
 .category-list {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #3ccace;
   text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
+  user-select: none;
+  border: 1px #3ccace solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
 }
 
 .brand-list {
@@ -81,7 +87,7 @@
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
-  color: #333333;
+  color: #1edfec;
   font-weight: bold;
 }
 
