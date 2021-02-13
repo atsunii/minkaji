@@ -16,7 +16,35 @@
 
   <%# 商品一覧 %>
   <div class='item-contents'>
-    <h2 class='title'>★現在のファミリー獲得ポイント★</h2>    
+    <h2 class='title'>★今月のファミリーポイント★</h2>
+    <h2 class='title'>現在<%= @total_score %>点、獲得しています！</h2>    
     <%= link_to '新規で家事を入力する', new_house_work_path, class: "subtitle" %>
+  </div>
+  <div class="item-show">
+   <div class="item-box">
+    <ul class='item-lists'>
+      <% @house_works.each do |house_work| %>
+       <li form_with class='list'>
+        <div class='item-info'>
+        </h3>
+        <table class="detail-table">
+       <tbody>
+        <tr>
+          <th class="detail-item">ユーザーネーム</th>
+          <td class="detail-value"><%= link_to house_work.user.name %></td>
+        </tr>
+      <%# @user_total_scores.each do |user_total_score| %>
+        <tr>
+          <th class="detail-item">合計獲得ポイント</th>
+          <td class="detail-value"><%=  %></td>
+        </tr>
+       </tbody>
+       </table>
+        </div>
+       </li>
+       <% end %>
+       <%# end %>
+    </ul>
+   </div>
  </div>
 </div>

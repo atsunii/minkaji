@@ -15,4 +15,5 @@ class HouseWork < ApplicationRecord
       validates :score_id
     end
   end
+
 end

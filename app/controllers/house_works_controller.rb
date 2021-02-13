@@ -5,6 +5,7 @@ class HouseWorksController < ApplicationController
 
   def index
     @house_works = HouseWork.all.order('created_at DESC')
+    @total_score = @house_works.sum(:score_id)
   end
 
   def new
