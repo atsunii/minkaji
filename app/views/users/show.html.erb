@@ -35,8 +35,8 @@
         </div>
        </li>
     <% if user_signed_in? && current_user.id == house_work.user_id %>
-      <%= link_to '家事内容の編集', edit_house_work_path(house_work.id), method: :get, class: "item-red-btn" %>
-      <%= link_to '削除', house_work_path(house_work.id), method: :delete, class:'item-destroy' %>
+      <%= link_to "家事内容の編集", "/house_works/#{house_work.id}/edit", class: "item-red-btn" %>
+      <%= link_to "削除", "/house_works/#{house_work.id}/destroy", method: "post", class:'item-destroy' %>
     <% end %>
     <% end %>
     </ul>
