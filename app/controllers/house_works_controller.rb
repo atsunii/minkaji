@@ -1,10 +1,11 @@
 class HouseWorksController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_house_work, only: [:show, :edit, :update, :destroy]
+  before_action :set_house_work, only: [:edit, :update, :destroy]
   before_action :redirect, only: [:edit, :update, :destroy]
+  before_action :move_to_index, only: [:edit, :update]
 
   def index
-    @house_works = HouseWork.all
+    @house_works = HouseWork.all.order('created_at DESC')
   end
 
   def new
@@ -18,9 +19,6 @@ class HouseWorksController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
   end
 
   def edit
@@ -51,7 +49,13 @@ class HouseWorksController < ApplicationController
   end
   
   def redirect
-    redirect_to :root unless @house_work.user == current_user
+    redirect_to :root unless @house_work.user.id == current_user
+  end
+
+  def move_to_index
+    if @house_work.present?
+      redirect_to root_path
+    end
   end
 
 end

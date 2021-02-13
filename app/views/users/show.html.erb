@@ -1,0 +1,44 @@
+<%= render "shared/header" %>
+<%# 商品の概要 %>
+<h2><%= link_to current_user.name, class: "user-nickname" %>さんが行った家事一覧</h2>
+<div class="item-show">
+  <div class="item-box">
+   <ul class='item-lists'>
+      <% @house_works.each do |house_work| %>
+       <li form_with class='list'>
+        <div class='item-info'>
+        </h3>
+        <table class="detail-table">
+       <tbody>
+        <tr>
+          <th class="detail-item">日付</th>
+          <td class="detail-value"><%= house_work.date %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">掃除した場所</th>
+          <td class="detail-value"><%= house_work.Clean.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">タオル交換</th>
+          <td class="detail-value"><%= house_work.Towel.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">ゴミ出し</th>
+          <td class="detail-value"><%= house_work.Garbage.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">合計獲得ポイント</th>
+          <td class="detail-value"><%= house_work.score.name %></td>
+        </tr>
+       </tbody>
+       </table>
+        </div>
+       </li>
+    <% if user_signed_in? && current_user.id == house_work.user_id %>
+      <%= link_to '家事内容の編集', edit_house_work_path(house_work.id), method: :get, class: "item-red-btn" %>
+      <%= link_to '削除', house_work_path(house_work.id), method: :delete, class:'item-destroy' %>
+    <% end %>
+    <% end %>
+    </ul>
+  </div>
+</div>

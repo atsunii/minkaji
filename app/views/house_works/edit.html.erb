@@ -5,7 +5,7 @@
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">家事の内容を入力</h2>
-    <%= form_with model: @house_works,local: true do |f| %>
+    <%= form_with model: @house_work, url: house_work_path(@house_work.id),local: true do |f| %>
 
     <%# 日付 %>
     <div class="form-group">
