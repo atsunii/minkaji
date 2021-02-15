@@ -1,12 +1,7 @@
 class HouseWorksController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:new]
   before_action :set_house_work, only: [:edit, :update, :destroy]
   before_action :redirect, only: [:edit, :update, :destroy]
-
-  def index
-    @house_works = HouseWork.all.order('created_at DESC')
-    @total_score = @house_works.sum(:score_id)
-  end
 
   def new
     @house_works = HouseWork.new

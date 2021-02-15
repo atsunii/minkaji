@@ -1,13 +1,12 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class='top-page-header'>
-  <div class='search-bar-contents'>
-    <%= link_to image_tag("IMG_4940.png", class:"furima-icon"), "/" %>
-  </div>
   <div class='nav'>
     <ul class='lists-left'>
-      <li><%= link_to '家事を入力', new_house_work_path, class: "category-list" %></li>
+      
     </ul>
     <ul class='lists-right'>
+        <li><%= link_to image_tag("IMG_4940.png", class:"furima-icon"), "/" %><li>
+        <li><%= link_to '家事を入力', new_house_work_path, class: "category-list" %></li>
       <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
       <% if user_signed_in? %>
          <li><%= link_to current_user.name, "/users/#{current_user.id}", class: "user-nickname" %></li>

@@ -23,7 +23,8 @@
   <div class="item-show">
    <div class="item-box">
     <ul class='item-lists'>
-      <% @house_works.each do |house_work| %>
+    <h2 class='title'>★個人の獲得ポイント★</h2>
+      <% @users.each do |user| %>
        <li form_with class='list'>
         <div class='item-info'>
         </h3>
@@ -31,19 +32,17 @@
        <tbody>
         <tr>
           <th class="detail-item">ユーザーネーム</th>
-          <td class="detail-value"><%= link_to house_work.user.name %></td>
+          <td class="detail-value-name"><%= link_to user.name %></td>
         </tr>
-      <%# @user_total_scores.each do |user_total_score| %>
         <tr>
-          <th class="detail-item">合計獲得ポイント</th>
-          <td class="detail-value"><%=  %></td>
+          <th class="detail-item">合計獲得</th>
+          <td class="detail-value"><%= user.house_works.sum(:score_id) %>点</td>
         </tr>
        </tbody>
        </table>
         </div>
        </li>
        <% end %>
-       <%# end %>
     </ul>
    </div>
  </div>
