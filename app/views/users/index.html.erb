@@ -32,7 +32,7 @@
        <tbody>
         <tr>
           <th class="detail-item">ユーザーネーム</th>
-          <td class="detail-value-name"><%= link_to user.name %></td>
+          <td class="detail-value-name"><%= link_to user.name, "/users/#{user.id}" %></td>
         </tr>
         <tr>
           <th class="detail-item">合計獲得</th>
