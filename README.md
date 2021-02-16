@@ -65,7 +65,7 @@
 - Rails 6.0.0
 - mysql2 0.4.4
 - gem 3.0.3
-- heroku 7.46.0
+- heroku 7.47.7
 # テーブル設計
 
 ## usersテーブル
