@@ -24,17 +24,23 @@
 #### `☆ 全体の獲得した家事ポイントを表示`
 #### `☆ 個人が獲得済みのポイントを表示`<br>
 ![Image from Gyazo](https://i.gyazo.com/3db53fa074a3e095ff19c99b15c48ceb.gif)
+<br>
 
 #### `☆ ログイン → 家事を入力 → 新規家事入力画面へ`<br>
 ![Image from Gyazo](https://i.gyazo.com/db80162d26ceb0fefe2fe85c8098c762.gif)
-#### `☆ 日付、行った家事、合計獲得ポイントを入力`
+<br>
+
+#### `☆ 日付、行った家事、合計獲得ポイントを入力`<br>
 ![Image from Gyazo](https://i.gyazo.com/b0cf8271c8f515145c25acdfd753ea69.gif)
-#### `☆ 獲得したポイントがTOPページへ反映される`
+<br>
+
+#### `☆ 獲得したポイントがTOPページへ反映される`<br>
 ![Image from Gyazo](https://i.gyazo.com/87148d36baaabfcdb2dfb613055ba921.gif)
+<br>
 
 #### `☆ ユーザー名 → 家事内容確認・内容編集・削除ができる<br>
 ![Image from Gyazo](https://i.gyazo.com/50865db3537008f87785128bb6cafa05.gif)
- 
+<br>
 
 # ✅ 追加したい機能
 | 機能                                                        | 
