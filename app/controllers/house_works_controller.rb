@@ -1,5 +1,5 @@
 class HouseWorksController < ApplicationController
-  before_action :authenticate_user!, except: [:new]
+  before_action :move_to_signed_in, only: [:new, :create,:edit, :update, :destroy]
   before_action :set_house_work, only: [:edit, :update, :destroy]
   before_action :redirect, only: [:edit, :update, :destroy]
 
@@ -47,4 +47,10 @@ class HouseWorksController < ApplicationController
     redirect_to :root unless @house_work.user == current_user
   end
   
+  def move_to_signed_in
+    unless user_signed_in?
+      redirect_to  '/users/sign_in'
+    end
+  end
+
 end
