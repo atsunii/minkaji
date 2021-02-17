@@ -1,6 +1,6 @@
 class HouseWorksController < ApplicationController
   before_action :move_to_signed_in, only: [:new, :create,:edit, :update, :destroy]
-  before_action :set_house_work, only: [:edit, :update, :destroy]
+  before_action :set_house_work, only: [:show, :edit, :update, :destroy]
   before_action :redirect, only: [:edit, :update, :destroy]
 
   def new
@@ -14,6 +14,9 @@ class HouseWorksController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
   end
 
   def edit
