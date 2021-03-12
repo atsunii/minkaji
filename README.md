@@ -12,7 +12,7 @@
 家事一つひとつにポイントを振り分け、個人の目標ポイント、全体の目標ポイントを設定し、誰か一人が負担を強いられることを無くす。家事を見える化する事で何が出来ていないかも確認する事ができる。
 
 # 🌐  App URL
-### **https://furima-32583.herokuapp.com/** 
+### **https://minkaji.herokuapp.com/** 
 ![Image from Gyazo](https://i.gyazo.com/0033e79b6bd92896e1c7d110089ed57e.jpg)
 
 
